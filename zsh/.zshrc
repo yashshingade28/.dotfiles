@@ -10,7 +10,7 @@ source_if_exists () {
 
 export DOTFILES=$HOME/.dotfiles/
 
-source_if_exists $DOTFILES/zsh/conf/env-vars.zsh
-source_if_exists $DOTFILES/zsh/conf/load-plugs.zsh
-source_if_exists $DOTFILES/zsh/conf/zsh-config
-source_if_exists $DOTFILES/zsh/conf/load-prompt.zsh
+source_if_exists $DOTFILES/zsh/conf/env.zsh
+source_if_exists $DOTFILES/zsh/conf/plugs.zsh
+source_if_exists $DOTFILES/zsh/conf/settings.zsh
+source_if_exists $DOTFILES/zsh/conf/prompt.zsh
