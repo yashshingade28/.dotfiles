@@ -31,6 +31,7 @@ Note: To enable my zsh config you must first have zsh installed on your system. 
 <details>
   <summary>fonts</summary>
 From the home directory run the following command to setup my fonts for the current user.
+
 ```bash
 bash ~/.dotfiles/setup.sh fonts
 ```
