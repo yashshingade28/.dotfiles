@@ -22,8 +22,13 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
+if [ -f /usr/bin/nvim ]; then
+  export EDITOR=/usr/bin/nvim
+  export VISUAL=/usr/bin/nvim
+else if [ -f /usr/bin/vim ]; then
+  export EDITOR=/usr/bin/vim
+  export VISUAL=/usr/bin/vim
+fi
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 
