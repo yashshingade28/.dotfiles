@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-if [[ $# -ne 1 ]]; then
+if [ $# -ne 1 ]; then
   echo "Error: This script requires exactly one command line argument." >&2
   exit 1
 fi
