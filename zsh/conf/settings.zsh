@@ -25,7 +25,7 @@ SAVEHIST=10000
 if [ -f /usr/bin/nvim ]; then
   export EDITOR=/usr/bin/nvim
   export VISUAL=/usr/bin/nvim
-else if [ -f /usr/bin/vim ]; then
+elif [ -f /usr/bin/vim ]; then
   export EDITOR=/usr/bin/vim
   export VISUAL=/usr/bin/vim
 fi

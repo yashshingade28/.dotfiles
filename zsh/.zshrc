@@ -1,3 +1,5 @@
+#!/usr/bin/zsh
+
 source_if_exists () {
     if [[ -r "$1" ]]; then
         source "$1"
@@ -8,9 +10,9 @@ source_if_exists () {
     fi
 }
 
-export DOTFILES=$HOME/.dotfiles/
+export DOTFILES=$HOME/.dotfiles
 
-source_if_exists $DOTFILES/zsh/conf/env.zsh
-source_if_exists $DOTFILES/zsh/conf/plugs.zsh
-source_if_exists $DOTFILES/zsh/conf/settings.zsh
-source_if_exists $DOTFILES/zsh/conf/prompt.zsh
+source_if_exists "$DOTFILES"/zsh/conf/env.zsh
+source_if_exists "$DOTFILES"/zsh/conf/plugs.zsh
+source_if_exists "$DOTFILES"/zsh/conf/settings.zsh
+source_if_exists "$DOTFILES"/zsh/conf/prompt.zsh
