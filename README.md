@@ -29,13 +29,13 @@ Note: To enable my zsh config you must first have zsh installed on your system. 
 </details>
 
 <details>
-  <summary>fonts</summary>
-Run the following command to setup my fonts for the current user.
+  <summary>tmux</summary>
+Run the following command to setup my tmux config.
 
 ```bash
-bash ~/.dotfiles/setup.sh fonts
+bash ~/.dotfiles/setup.sh tmux
 ```
-Note: Please note that this command will load all the fonts present in the ~/.local/share/fonts directory for the current user, but it will not automatically set any font as the default. You will need to manually set your desired font in your system settings or in your application's font preferences.  
+Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux) from which i've borrowed most of my tmux configuration.
 </details>
 
 <details>
@@ -48,13 +48,13 @@ bash ~/.dotfiles/setup.sh kitty
 </details>
 
 <details>
-  <summary>tmux</summary>
-Run the following command to setup my tmux config.
+  <summary>fonts</summary>
+Run the following command to setup my fonts for the current user.
 
 ```bash
-bash ~/.dotfiles/setup.sh tmux
+bash ~/.dotfiles/setup.sh fonts
 ```
-Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux) from which i've borrowed most of my tmux configuration.
+Note: Please note that this command will load all the fonts present in the ~/.local/share/fonts directory for the current user, but it will not automatically set any font as the default. You will need to manually set your desired font in your system settings or in your application's font preferences.  
 </details>
 
 
