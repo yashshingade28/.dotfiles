@@ -16,7 +16,7 @@ git clone --recursive https://github.com/yashshingade28/.dotfiles ~/.dotfiles
 This will download the dotfiles repository into a new directory named .dotfiles in your home directory.
 
 ## Setup
-Now that you my dotfiles placed in the correct folder you can configure various tools using the following commands.
+Now that you have my dotfiles placed in the correct folder you can configure the various tools i use by following these commands.
 
 <details>
   <summary>zsh</summary>
@@ -54,6 +54,7 @@ Run the following command to setup my tmux config.
 ```bash
 bash ~/.dotfiles/setup.sh tmux
 ```
+Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux)
 </details>
 
 
