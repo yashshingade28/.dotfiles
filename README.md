@@ -54,7 +54,7 @@ Run the following command to setup my tmux config.
 ```bash
 bash ~/.dotfiles/setup.sh tmux
 ```
-Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux)
+Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux) from which i've borrowed most of my tmux configuration.
 </details>
 
 
