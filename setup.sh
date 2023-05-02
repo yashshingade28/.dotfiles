@@ -52,6 +52,23 @@ setup_kitty () {
   ln -s "$DOTFILES/kitty" "$HOME/.config/kitty"
 }
 
+setup_tmux () {
+  if ! command -v tmux &> /dev/null; then
+    echo "tmux is not installed on this system." >&2
+    return 1
+  fi
+
+  mkdir -p "$HOME/.config"
+  backup_if_exists "$HOME/.config/tmux"
+  ln -s "$DOTFILES/tmux" "$HOME/.config/tmux"
+
+  backup_if_exists "$HOME/.tmux.conf"
+  ln -s "$DOTFILES/tmux/tmux.conf" "$HOME/.tmux.conf"
+
+  backup_if_exists "$HOME/.tmux.conf.local"
+  ln -s "$DOTFILES/tmux/tmux.conf.local" "$HOME/.tmux.conf.local"
+}
+
 case "$setup_mode" in
   zsh)
     setup_zsh
@@ -61,6 +78,9 @@ case "$setup_mode" in
     ;;
   fonts)
     setup_fonts
+    ;;
+  tmux)
+    setup_tmux
     ;;
   *)
     echo "Unknown setup_mode: $setup_mode" >&2
