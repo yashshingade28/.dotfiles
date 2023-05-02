@@ -20,7 +20,7 @@ Now that you my dotfiles placed in the correct folder you can configure various 
 
 <details>
   <summary>zsh</summary>
-From the home directory run the following command to setup my zsh config.
+Run the following command to setup my zsh config.
 
 ```bash
 bash ~/.dotfiles/setup.sh zsh
@@ -30,12 +30,30 @@ Note: To enable my zsh config you must first have zsh installed on your system. 
 
 <details>
   <summary>fonts</summary>
-From the home directory run the following command to setup my fonts for the current user.
+Run the following command to setup my fonts for the current user.
 
 ```bash
 bash ~/.dotfiles/setup.sh fonts
 ```
 Note: Please note that this command will load all the fonts present in the ~/.local/share/fonts directory for the current user, but it will not automatically set any font as the default. You will need to manually set your desired font in your system settings or in your application's font preferences.  
+</details>
+
+<details>
+  <summary>kitty</summary>
+Run the following command to setup my kitty config.
+
+```bash
+bash ~/.dotfiles/setup.sh kitty
+```
+</details>
+
+<details>
+  <summary>tmux</summary>
+Run the following command to setup my tmux config.
+
+```bash
+bash ~/.dotfiles/setup.sh tmux
+```
 </details>
 
 
