@@ -1,13 +1,13 @@
+backup_if_exists () {
+  if [[ -r "$1" ]]; then
+    mv --backup=numbered "$1" "$1.bak"
+    return 0
+  fi
+}
+
 alias cp="cp -i"                                                # Confirm before overwriting something
-alias free='free -m'                                            # Show sizes in MB
 
 export TERM="xterm-256color"
-
-# been there
-if command -v trash &> /dev/null
-then
-  alias rm=trash
-fi
 
 # better df
 if command -v duf &> /dev/null
