@@ -4,8 +4,17 @@ set -euo pipefail
 
 backup_if_exists () {
   if [[ -r "$1" ]]; then
-    mv --backup=numbered "$1" "$1.bak"
-    return 0
+    echo -n "$1 exists. Do you want to backup this file/directory? ([Y]es/[N]o/[A]bort) "
+    read -r response
+
+    if [[ "$response" =~ ^[Yy]$ ]]; then
+      mv --backup=numbered "$1" "$1.bak"
+    elif [[ "$response" =~ ^[Nn]$ ]]; then
+      rm -rf "$1"
+    else
+      echo "setup aborted safely"
+      exit 1
+    fi
   fi
 }
 

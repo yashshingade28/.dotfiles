@@ -6,6 +6,7 @@ backup_if_exists () {
 }
 
 alias cp="cp -i"                                                # Confirm before overwriting something
+alias mv="mv -i"                                                # Confirm before overwriting something
 
 export TERM="xterm-256color"
 
