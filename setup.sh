@@ -41,7 +41,6 @@ setup_zsh () {
 
   ln -s "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
   zsh
-  source "$HOME/.zshrc"
 }
 
 setup_fonts () {
