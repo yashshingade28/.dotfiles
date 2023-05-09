@@ -1,3 +1,4 @@
+# create .bak files
 backup_if_exists () {
   if [[ -r "$1" ]]; then
     mv --backup=numbered "$1" "$1.bak"
@@ -8,8 +9,14 @@ backup_if_exists () {
 # spawn a calculator -- Usage : qqbc "2/(3+5)"
 function qqbc() { echo "scale=${2:-2}; $1" | bc -l }
 
+# confirm before overwriting a file
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias mv="mv -i"                                                # Confirm before overwriting something
+
+# colorize grep output
+alias grep="grep --color=always"
+alias egrep="egrep --color=always"
+alias fgrep="fgrep --color=always"
 
 export TERM="xterm-256color"
 
@@ -30,6 +37,7 @@ else
   alias ls='ls $LS_OPTIONS'
 fi
 
+# better cat
 if command -v bat &> /dev/null
 then
   alias cat=bat
