@@ -5,6 +5,9 @@ backup_if_exists () {
   fi
 }
 
+# spawn a calculator -- Usage : qqbc "2/(3+5)"
+function qqbc() { echo "scale=${2:-2}; $1" | bc -l }
+
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias mv="mv -i"                                                # Confirm before overwriting something
 
