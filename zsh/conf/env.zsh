@@ -1,5 +1,5 @@
 # create .bak files
-backup_if_exists () {
+bak () {
   if [[ -r "$1" ]]; then
     mv --backup=numbered "$1" "$1.bak"
     return 0
@@ -10,8 +10,8 @@ backup_if_exists () {
 function qqbc() { echo "scale=${2:-2}; $1" | bc -l }
 
 # confirm before overwriting a file
-alias cp="cp -i"                                                # Confirm before overwriting something
-alias mv="mv -i"                                                # Confirm before overwriting something
+alias cp="cp -i" 
+alias mv="mv -i"
 
 # colorize grep output
 alias grep="grep --color=always"
