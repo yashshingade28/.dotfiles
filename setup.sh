@@ -43,12 +43,6 @@ setup_zsh () {
   zsh
 }
 
-setup_fonts () {
-  mkdir -p "$HOME/.local/share"
-  backup_if_exists "$HOME/.local/share/fonts"
-  ln -s "$DOTFILES/fonts" "$HOME/.local/share/fonts"
-}
-
 setup_kitty () {
   if ! command -v kitty &> /dev/null; then
     echo "kitty is not installed on this system." >&2
@@ -58,6 +52,23 @@ setup_kitty () {
   mkdir -p "$HOME/.config"
   backup_if_exists "$HOME/.config/kitty"
   ln -s "$DOTFILES/kitty" "$HOME/.config/kitty"
+}
+
+setup_alacritty () {
+  if ! command -v alacritty &> /dev/null; then
+    echo "alacritty is not installed on this system." >&2
+    return 1
+  fi
+
+  mkdir -p "$HOME/.config"
+  backup_if_exists "$HOME/.config/alacritty"
+  ln -s "$DOTFILES/alacritty" "$HOME/.config/alacritty"
+}
+
+setup_fonts () {
+  mkdir -p "$HOME/.local/share"
+  backup_if_exists "$HOME/.local/share/fonts"
+  ln -s "$DOTFILES/fonts" "$HOME/.local/share/fonts"
 }
 
 setup_tmux () {
@@ -83,6 +94,9 @@ case "$setup_mode" in
     ;;
   kitty)
     setup_kitty
+    ;;
+  alacritty)
+    setup_alacritty
     ;;
   fonts)
     setup_fonts

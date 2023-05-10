@@ -29,21 +29,20 @@ Note: To enable my zsh config you must first have zsh installed on your system. 
 </details>
 
 <details>
-  <summary>tmux</summary>
-Run the following command to setup my tmux config.
-
-```bash
-bash ~/.dotfiles/setup.sh tmux
-```
-Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux) from which i've borrowed most of my tmux configuration.
-</details>
-
-<details>
   <summary>kitty</summary>
 Run the following command to setup my kitty config.
 
 ```bash
 bash ~/.dotfiles/setup.sh kitty
+```
+</details>
+
+<details>
+  <summary>alacritty</summary>
+Run the following command to setup my alacritty config.
+
+```bash
+bash ~/.dotfiles/setup.sh alacritty
 ```
 </details>
 
@@ -57,6 +56,15 @@ bash ~/.dotfiles/setup.sh fonts
 Note: Please note that this command will load all the fonts present in the ~/.local/share/fonts directory for the current user, but it will not automatically set any font as the default. You will need to manually set your desired font in your system settings or in your application's font preferences.  
 </details>
 
+<details>
+  <summary>tmux</summary>
+Run the following command to setup my tmux config.
+
+```bash
+bash ~/.dotfiles/setup.sh tmux
+```
+Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux) from which i've borrowed most of my tmux configuration.
+</details>
 
 ## Customization
 Feel free to modify these dotfiles to suit your own preferences and workflows. Also let me know if i can improve any of my configs or any part of my workflow.
