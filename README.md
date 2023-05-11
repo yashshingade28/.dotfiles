@@ -3,15 +3,14 @@
 This repository contains my personal dotfiles for configuring Linux environments. These dotfiles are tailored to my personal preferences and workflows, but you are free to use them as a starting point for your own configuration.
 
 ## Installation
-To install my dotfiles, follow these steps:
-1) Clone this repository by entering the following command:
+Install my dotfiles by cloning this repository in your home directory by running the following command.
 ```bash
 git clone --recursive https://github.com/yashshingade28/.dotfiles ~/.dotfiles
 ```
-This will download the dotfiles repository into a new directory named .dotfiles in your home directory.
+This command will download this dotfiles repository into a new directory named .dotfiles in your home directory.
 
 ## Setup
-Now that you have my dotfiles placed in the correct folder you can configure the various tools i use by following these commands.
+Now that you have my dotfiles placed in the correct folder, you can configure the various tools I use by following these commands. I have created a bash script that allows you to set up any of the following tools using just a single command. This script basically creates symbolic links to the necessary configuration files for each tool and backups any previous configuration files that may exist.
 
 <details>
   <summary>zsh</summary>
