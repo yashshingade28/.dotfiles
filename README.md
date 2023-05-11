@@ -2,11 +2,6 @@
 
 This repository contains my personal dotfiles for configuring Linux environments. These dotfiles are tailored to my personal preferences and workflows, but you are free to use them as a starting point for your own configuration.
 
-## Prerequisites
-To use these dotfiles, you must have the following software installed on your Linux system:
-- Git
-- [Nerd Fonts](https://www.nerdfonts.com/) (optional, but recommended)
-
 ## Installation
 To install my dotfiles, follow these steps:
 1) Clone this repository by entering the following command:
