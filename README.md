@@ -11,6 +11,7 @@ This command will download this dotfiles repository into a new directory named .
 
 ## Setup
 Now that you have my dotfiles placed in the correct folder, you can configure the various tools I use by following these commands. 
+
 I have created a bash script that allows you to set up any of the following tools using just a single command. This script basically creates symbolic links to the necessary configuration files for each tool and backups any previous configuration files that may exist.
 
 <details>
