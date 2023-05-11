@@ -9,6 +9,7 @@ backup_if_exists () {
 
     if [[ "$response" =~ ^[Yy]$ ]]; then
       mv --backup=numbered "$1" "$1.bak"
+      echo "Backup created at $(dirname "$1")"
     elif [[ "$response" =~ ^[Nn]$ ]]; then
       rm -rf "$1"
     else
