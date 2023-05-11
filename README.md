@@ -48,7 +48,7 @@ Run the following command to setup my fonts for the current user.
 ```bash
 bash ~/.dotfiles/setup.sh fonts
 ```
-Note: Please note that this command will load all the fonts present in the `~/.local/share/fonts directory` for the current user, but it will not automatically set any font as the default. You will need to manually set your desired font in your system settings or in your application's font preferences.  
+Note: Please note that this command will load all the fonts present in the `~/.local/share/fonts` directory for the current user, but it will not automatically set any font as the default. You will need to manually set your desired font in your system settings or in your application's font preferences.  
 </details>
 
 <details>
