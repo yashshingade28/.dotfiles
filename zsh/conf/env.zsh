@@ -7,7 +7,10 @@ bak () {
 }
 
 # python calculator -- Usage : calc "2/(3+5)"
-alias pycalc="python -c \"from math import *; import sys; print(eval(''.join(sys.argv[1:])))\""
+if command -v python &> /dev/null
+then
+  alias pycalc="python -c \"from math import *; import sys; print(eval(''.join(sys.argv[1:])))\""
+fi
 
 # confirm before overwriting a file
 alias cp="cp -i" 
