@@ -23,7 +23,8 @@ scrolling:
 font:
   normal:
     family: JetBrainsMono Nerd Font
-    style:  Regular
+    style:  SemiBold
+    # style:  Regular
   bold:
     family: JetBrainsMono Nerd Font
     style:  Bold
