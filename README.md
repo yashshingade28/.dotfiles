@@ -52,11 +52,11 @@ Note: Please note that this command will load all the fonts present in the `~/.l
 </details>
 
 <details>
-  <summary>fonts</summary>
+  <summary>neovim</summary>
 Run the following command to setup my neovim config for the current user.
 
 ```bash
-bash ~/.dotfiles/setup.sh fonts
+bash ~/.dotfiles/setup.sh nvim
 ```
 Note: I use [nvchad](https://nvchad.com) as my base neovim config, this script will download that for you along with backing up your old config and then link my nvchad custom folder to the base config.
 </details>
