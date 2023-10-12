@@ -72,6 +72,19 @@ setup_fonts () {
   ln -s "$DOTFILES/fonts" "$HOME/.local/share/fonts"
 }
 
+setup_nvim () {
+  if ! command -v nvim &> /dev/null; then
+    echo "neovim is not installed on this system." >&2
+    return 1
+  fi
+
+  backup_if_exists "$HOME/.config/nvim"
+  rm -rf ~/.local/share/nvim
+  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+  ln -s ~/.dotfiles/nvim/nvchad/custom ~/.config/nvim/lua/custom
+  nvim
+}
+
 setup_tmux () {
   if ! command -v tmux &> /dev/null; then
     echo "tmux is not installed on this system." >&2
@@ -101,6 +114,9 @@ case "$setup_mode" in
     ;;
   fonts)
     setup_fonts
+    ;;
+  nvim)
+    setup_nvim
     ;;
   tmux)
     setup_tmux
