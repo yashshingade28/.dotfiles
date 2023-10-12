@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+auto start = std::chrono::high_resolution_clock::now();
+    
+$0
+    
+auto stop = std::chrono::high_resolution_clock::now();
+// auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+// auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+clog << duration.count() << " ms" << '\n';
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>calctime </tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

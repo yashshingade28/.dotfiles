@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+template <class T>
+class cmp {
+   public:
+    constexpr bool operator()(const T &a, const T &b) const {
+        return a > b;
+    }
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>comparator</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+std::mt19937_64 rng(std::random_device{}());
+inline int64_t randint(int64_t l, int64_t r) {return std::uniform_int_distribution<int64_t>(l, r)(rng);}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>random</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,71 @@
+<snippet>
+	<content><![CDATA[
+class binarylift {
+public:
+    int32_t n, len;
+    vector<vector<int>> up;
+    vector<int> level;
+
+    inline int bitlen(int mask) { return (32 - __builtin_clz(mask)); }
+
+    template <typename T>
+    binarylift(int root, const vector<vector<T>>& adj) {
+        n = adj.size();
+        len = bitlen(n);
+        up.assign(len, vector<int>(n, -1));
+        level.assign(n, 0);
+        build_lift(root, -2, 0, adj);
+    }
+
+    template <typename T>
+    void build_lift(int v, int p, int lvl, const vector<vector<T>>& adj) {
+        up[0][v] = p;
+        level[v] = lvl;
+        for (int i = 1; i < bitlen(lvl); ++i) {
+            up[i][v] = up[i - 1][up[i - 1][v]];
+        }
+
+        for (auto u : adj[v]) {
+            if (u != p) build_lift(u, v, lvl + 1, adj);
+        }
+    }
+
+    template <typename T>
+    binarylift(const vector<T>& parent) {
+        n = parent.size();
+        len = bitlen(n);
+        up.assign(len, vector<int>(n));
+        build_lift(parent);
+    }
+
+    template <typename T>
+    void build_lift(const vector<T>& parent) {
+        for (int i = 0; i < n; i++) {
+            up[0][i] = parent[i];
+            if (parent[i] == i) up[0][i] = -2;
+        }
+
+        for (int i = 1; i < len; i++) {
+            for (int j = 0; j < n; j++) {
+                if (up[i - 1][j] == -2) {
+                    up[i][j] = -2;
+                } else {
+                    up[i][j] = up[i - 1][up[i - 1][j]];
+                }
+            }
+        }
+    }
+
+    int query(int node, int noofup) {
+        for (int i = 0 ; noofup > 0 && node != -2 ; i++, noofup >>= 1) {
+            if (noofup & 1) node = up[i][node];
+        }
+        return node;
+    }
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>binlift</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
