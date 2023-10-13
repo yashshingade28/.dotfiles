@@ -72,4 +72,4 @@ Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [t
 </details>
 
 ## Customization
-Feel free to modify these dotfiles to suit your own preferences and workflows. Also let me know if i can improve any of my configs or any part of my workflow.
+Feel free to modify these dotfiles to suit your own preferences and workflows. Also let me know if i can improve any of my configs or any part of my workflow or if you want a suggest a way to implement any of my todos :)
