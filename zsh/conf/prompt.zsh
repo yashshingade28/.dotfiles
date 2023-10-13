@@ -1,7 +1,7 @@
 () {
   emulate -L zsh
 
-  source_if_exists $DOTFILES/zsh/conf/powerlevel10k/powerlevel10k.zsh-theme
+  source_if_exists "$DOTFILES"/zsh/conf/powerlevel10k/powerlevel10k.zsh-theme
 
   typeset USE_POWERLINE=true
 
@@ -22,11 +22,11 @@
 
   if [[ $USE_POWERLINE == false ]]; then
     # Use 8 colors and ASCII.
-    source_if_exists $DOTFILES/zsh/conf/.p10k-portable.zsh
+    source_if_exists "$DOTFILES"/zsh/conf/.p10k-portable.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
   else
     # Use 256 colors and UNICODE.
-    if source_if_exists $DOTFILES/zsh/conf/.p10k.zsh; then
+    if source_if_exists "$DOTFILES"/zsh/conf/.p10k.zsh; then
       # Enabling the correct and wrong status at the right end
       typeset -g POWERLEVEL9K_STATUS_OK=true
       typeset -g POWERLEVEL9K_STATUS_ERROR=true
