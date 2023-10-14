@@ -46,4 +46,4 @@ then
   alias cat=bat
 fi
 
-source_if_exists "$DOTFILES"/zsh/conf/custom/env.zsh
+source_if_exists -s "$DOTFILES"/zsh/conf/custom/env.zsh
