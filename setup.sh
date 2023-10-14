@@ -109,7 +109,9 @@ setup_sublime () {
   fi
 
   mkdir -p ~/.config/sublime-text/Packages/User
+  backup_if_exists "$HOME/.config/sublime-text/Packages/User/custom"
   ln -s "$DOTFILES/sublime-setup/custom" "$HOME/.config/sublime-text/Packages/User/custom"
+  backup_if_exists "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
   cp -f "$DOTFILES/sublime-setup/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
 }
 
