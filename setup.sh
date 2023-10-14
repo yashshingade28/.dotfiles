@@ -107,10 +107,10 @@ setup_sublime () {
     echo "sublime-text is not installed on this system." >&2
     return 1
   fi
-    
+
+  mkdir -p ~/.config/sublime-text/Packages/User
   ln -s "$DOTFILES/sublime-setup/custom" "$HOME/.config/sublime-text/Packages/User/custom"
-  ln -sf "$DOTFILES/sublime-setup/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
-  ln -sf "$DOTFILES/sublime-setup/Default (Linux).sublime-keymap" "$HOME/.config/sublime-text/Packages/User/Default (Linux).sublime-keymap"
+  cp -f "$DOTFILES/sublime-setup/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
 }
 
 case "$setup_mode" in
