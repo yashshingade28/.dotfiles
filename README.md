@@ -73,7 +73,7 @@ Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [t
 
 <details>
   <summary>sublime-text</summary>
-Run the following command to setup my sublime-text config which is more specifically geared towards competitive programming, it consists of snippets for all the data structures and algorithms that i use during my competitive programming contests which can also be found [here](https://github.com/gpakosz). 
+Run the following command to setup my sublime-text config which is more specifically geared towards competitive programming, it consists of snippets for all the data structures and algorithms that i use during my competitive programming contests which can also be found [here](https://github.com/yashshingade28/competitive-programming) . 
 
 ```bash
 bash ~/.dotfiles/setup.sh sublime
