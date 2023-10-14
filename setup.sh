@@ -102,6 +102,17 @@ setup_tmux () {
   ln -s "$DOTFILES/tmux/tmux.conf.local" "$HOME/.tmux.conf.local"
 }
 
+setup_sublime () {
+  if ! command -v subl &> /dev/null; then
+    echo "sublime-text is not installed on this system." >&2
+    return 1
+  fi
+    
+  ln -s "$DOTFILES/sublime-setup/custom" "$HOME/.config/sublime-text/Packages/User/custom"
+  ln -sf "$DOTFILES/sublime-setup/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
+  ln -sf "$DOTFILES/sublime-setup/Default (Linux).sublime-keymap" "$HOME/.config/sublime-text/Packages/User/Default (Linux).sublime-keymap"
+}
+
 case "$setup_mode" in
   zsh)
     setup_zsh
@@ -120,6 +131,9 @@ case "$setup_mode" in
     ;;
   tmux)
     setup_tmux
+    ;;
+  sublime)
+    setup_sublime
     ;;
   *)
     echo "Unknown setup_mode: $setup_mode" >&2
