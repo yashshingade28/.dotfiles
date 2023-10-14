@@ -1,0 +1,23 @@
+[
+	{ "keys": ["alt+k"], "command": "cancel_build" },
+	{ "keys": ["ctrl+enter"], "command": "build" },
+	{ "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	{ "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+	{ "keys": ["shift+alt+up"], "command": "duplicate_line"  },
+	{ "keys": ["shift+alt+down"], "command": "duplicate_line" },
+
+	{ "keys": ["ctrl+keypad_plus"], "command": "noop" },
+	{ "keys": ["ctrl+keypad_minus"], "command": "noop" },
+
+	{
+       "keys": ["alt+t"],
+       "command": "terminus_open",
+       "args" : {
+           "cmd": "zsh",
+           "cwd": "${file_path:${folder}}",
+           "panel_name": "Terminus"
+       }
+   }
+]
