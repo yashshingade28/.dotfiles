@@ -3,7 +3,7 @@
 	[
 		"Vintage",
 	],
-	"color_scheme": "Guna.sublime-color-scheme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 
 	"tab_size": 4,
@@ -21,11 +21,4 @@
 	"caret_extra_top": 0,
 	"caret_extra_bottom": 3,
 	"caret_extra_width": 1,
-	
-	"gn_hide_tab_dropdown": true,
-	"gn_overlay_scroll_bars": true,
-	"gn_sidebar_box": true,
-	"gn_title_bar": true,
-	"gnwidg1": true,
-	"gnwidgo": true,
 }
