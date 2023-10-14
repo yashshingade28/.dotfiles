@@ -71,5 +71,14 @@ bash ~/.dotfiles/setup.sh tmux
 Note: Thanks to [Grégory Pakosz](https://github.com/gpakosz) for his amazing [tmux configs](https://github.com/gpakosz/.tmux) from which i've borrowed most of my tmux configuration.
 </details>
 
+<details>
+  <summary>sublime-text</summary>
+Run the following command to setup my sublime-text config which is more specifically geared towards competitive programming, it consists of snippets for all the data structures and algorithms that i use during my competitive programming contests which can also be found [here](https://github.com/gpakosz). 
+
+```bash
+bash ~/.dotfiles/setup.sh sublime
+```
+</details>
+
 ## Customization
 Feel free to modify these dotfiles to suit your own preferences and workflows. Also let me know if i can improve any of my configs or any part of my workflow or if you want a suggest a way to implement any of my todos :)
