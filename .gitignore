@@ -1,2 +1,2 @@
-/zsh/conf/custom/*
-!/zsh/conf/custom
+/zsh/conf/custom/
+!/zsh/conf/custom/.gitkeep
