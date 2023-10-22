@@ -11,6 +11,8 @@
 	"font_face": "JetBrainsMono Nerd Font",
 	"font_size": 13,
 
+    "show_minimap": false,
+
 	// Additional spacing at the top of each line, in pixels
 	"line_padding_top": 1,
 
