@@ -115,6 +115,16 @@ setup_sublime () {
   cp -f "$DOTFILES/sublime-setup/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
 }
 
+setup_git () {
+  if ! command -v git &> /dev/null; then
+    echo "git is not installed on this system." >&2
+    return 1
+  fi
+
+  backup_if_exists "$HOME/.gitconfig"
+  ln -s "$DOTFILES/git/.gitconfig" "$HOME/.gitconfig"
+}
+
 case "$setup_mode" in
   zsh)
     setup_zsh
@@ -136,6 +146,9 @@ case "$setup_mode" in
     ;;
   sublime)
     setup_sublime
+    ;;
+  git)
+    setup_git
     ;;
   *)
     echo "Unknown setup_mode: $setup_mode" >&2

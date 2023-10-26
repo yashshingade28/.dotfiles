@@ -80,5 +80,14 @@ bash ~/.dotfiles/setup.sh sublime
 ```
 </details>
 
+<details>
+  <summary>git</summary>
+Run the following command to setup my git config.
+
+```bash
+bash ~/.dotfiles/setup.sh git
+```
+</details>
+
 ## Customization
 Feel free to modify these dotfiles to suit your own preferences and workflows. Also let me know if i can improve any of my configs or any part of my workflow or if you want a suggest a way to implement any of my todos :)

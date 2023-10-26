@@ -1,0 +1,7 @@
+[user]
+	name = yashshingade28
+	email = yashshingade28@protonmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
