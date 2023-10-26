@@ -6,9 +6,10 @@ window:
     x: 10
     y: 10
   dynamic_padding: true
-
+  decorations: none
+  
   opacity: 0.8
-  startup_mode: Fullscreen
+  startup_mode: Maximized
   title: Alacritty
   dynamic_title: true
 
