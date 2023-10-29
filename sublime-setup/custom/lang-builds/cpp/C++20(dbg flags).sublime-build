@@ -1,0 +1,6 @@
+{
+"cmd": ["g++ -D_GLIBCXX_DEBUG -std=c++20 -Wall -Wextra -Wshadow ${file} -o /tmp/execfile.exe && /tmp/execfile.exe"],
+"shell": true,
+"working_dir": "$file_path",
+"selector": "source.cpp"
+}

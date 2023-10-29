@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+#ifndef ONLINE_JUDGE
+#define dbg(x) cerr<< #x << " : "; prt(x); cerr << endl;
+#else
+#define dbg(x)
+#endif
+
+void prt(vector<vector<int>>v) {cerr << "\n"; for (auto i : v) {cerr << "[ "; for (auto j : i) {cerr << j << " ";} cerr << "]\n";}}
+void prt(vector<vector<ll>>v) {cerr << "\n"; for (auto i : v) {cerr << "[ "; for (auto j : i) {cerr << j << " ";} cerr << "]\n";}}
+void prt(vector<int> v) { cerr << "[ "; for (auto i : v) { cerr << i << " "; } cerr << "]"; }
+void prt(vector<ll> v) { cerr << "[ "; for (auto i : v) { cerr << i << " "; } cerr << "]"; }
+void prt(vector<pair<int, int>> v) { for (auto i : v) {cerr << "\n[ " << i.first << " " << i.second << " ]";}}
+void prt(vector<pair<ll , ll >> v) {for (auto i : v) {cerr << "\n[ " << i.first << " " << i.second << " ]";}}
+void prt(int a) {cerr << a;}
+void prt(ll a) {cerr << a;}
+void prt(char a) {cerr << "'" << a << "'" ;}
+void prt(string a) {cerr << "\"" << a << "\"";}
+void prt(bool a) {cerr << a;}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>debfunc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

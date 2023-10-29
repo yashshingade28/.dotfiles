@@ -1,0 +1,6 @@
+{
+"cmd": ["pypy" , "${file}"],
+"shell": true,
+"working_dir": "$file_path",
+"selector": "source.py"
+}

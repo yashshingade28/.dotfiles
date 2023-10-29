@@ -1,0 +1,6 @@
+{
+"cmd": ["gcc ${file} -o /tmp/execfile.exe && /tmp/execfile.exe <input.txt 1>output.txt 2>error.txt"],
+"shell": true,
+"working_dir": "$file_path",
+"selector": "source.c"
+}
