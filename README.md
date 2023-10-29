@@ -9,6 +9,20 @@ git clone --recursive https://github.com/yashshingade28/.dotfiles ~/.dotfiles
 ```
 This command will download this dotfiles repository into a new directory named .dotfiles in your home directory.
 
+<details>
+  <summary>sparse-clone</summary>
+  
+In case you want to only clone some folders/files from my .dotfiles run the following command.
+```bash
+git clone --no-checkout --depth=1 --filter=blob:none https://github.com/yashshingade28/.dotfiles.git ~/.dotfiles
+```
+Now you can sparse-checkout all the files and folders you want.
+Here is a command for example which you can run inside the .dotfiles folder to clone only setup.sh and sublime-setup folder from my .dotfiles.
+```bash
+git sparse-checkout set --no-cone sublime-setup /setup.sh ; git checkout
+```
+</details>
+
 ## Setup
 Now that you have my dotfiles placed in the correct folder, you can configure the various tools I use by following these commands. 
 
