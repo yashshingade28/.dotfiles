@@ -1,7 +1,21 @@
 [user]
-	name = yashshingade28
+	name = Yash Shingade
 	email = yashshingade28@protonmail.com
+
 [core]
 	editor = nvim
+
 [init]
 	defaultBranch = main
+
+[alias]
+    sparse-clone = "!f() { \
+        repo_url=\"$1\"; \
+        shift; \
+        sparse_paths=($@); \
+        git clone --no-checkout --depth=1 --filter=blob:none \"$repo_url\"; \
+        repo_name=\"$(basename \"$repo_url\" .git)\"; \
+        cd \"$repo_name\" || return; \
+        git sparse-checkout set --no-cone \"${sparse_paths[@]}\"; \
+        git checkout; \
+    }; f"
