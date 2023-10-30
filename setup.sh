@@ -37,6 +37,10 @@ setup_zsh () {
     echo "zsh is not installed on this system." >&2
     return 1
   fi
+  if [ ! -d "$DOTFILES/zsh" ]; then
+    echo "The \$DOTFILES/zsh folder does not exist."
+    return 1
+  fi
 
   backup_if_exists "$HOME/.zshrc"
 
@@ -47,6 +51,10 @@ setup_zsh () {
 setup_kitty () {
   if ! command -v kitty &> /dev/null; then
     echo "kitty is not installed on this system." >&2
+    return 1
+  fi
+  if [ ! -d "$DOTFILES/kitty" ]; then
+    echo "The \$DOTFILES/kitty folder does not exist."
     return 1
   fi
 
@@ -60,6 +68,10 @@ setup_alacritty () {
     echo "alacritty is not installed on this system." >&2
     return 1
   fi
+  if [ ! -d "$DOTFILES/alacritty" ]; then
+    echo "The \$DOTFILES/alacritty folder does not exist."
+    return 1
+  fi
 
   mkdir -p "$HOME/.config"
   backup_if_exists "$HOME/.config/alacritty"
@@ -67,6 +79,11 @@ setup_alacritty () {
 }
 
 setup_fonts () {
+  if [ ! -d "$DOTFILES/fonts" ]; then
+    echo "The \$DOTFILES/fonts folder does not exist."
+    return 1
+  fi
+
   mkdir -p "$HOME/.local/share"
   backup_if_exists "$HOME/.local/share/fonts"
   ln -s "$DOTFILES/fonts" "$HOME/.local/share/fonts"
@@ -77,17 +94,25 @@ setup_nvim () {
     echo "neovim is not installed on this system." >&2
     return 1
   fi
+  if [ ! -d "$DOTFILES/nvim" ]; then
+    echo "The \$DOTFILES/nvim folder does not exist."
+    return 1
+  fi
 
   backup_if_exists "$HOME/.config/nvim"
-  rm -rf ~/.local/share/nvim
-  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-  ln -s ~/.dotfiles/nvim/nvchad/custom ~/.config/nvim/lua/custom
+  rm -rf "$HOME/.local/share/nvim"
+  git clone https://github.com/NvChad/NvChad "$HOME/.config/nvim" --depth 1
+  ln -s "$DOTFILES/nvim/nvchad/custom" "$HOME/.config/nvim/lua/custom"
   nvim
 }
 
 setup_tmux () {
   if ! command -v tmux &> /dev/null; then
     echo "tmux is not installed on this system." >&2
+    return 1
+  fi
+  if [ ! -d "$DOTFILES/tmux" ]; then
+    echo "The \$DOTFILES/tmux folder does not exist."
     return 1
   fi
 
@@ -107,8 +132,12 @@ setup_sublime () {
     echo "sublime-text is not installed on this system." >&2
     return 1
   fi
+  if [ ! -d "$DOTFILES/sublime-setup" ]; then
+    echo "The \$DOTFILES/sublime-setup folder does not exist."
+    return 1
+  fi
 
-  mkdir -p ~/.config/sublime-text/Packages/User
+  mkdir -p "$HOME/.config/sublime-text/Packages/User"
   backup_if_exists "$HOME/.config/sublime-text/Packages/User/custom"
   ln -s "$DOTFILES/sublime-setup/custom" "$HOME/.config/sublime-text/Packages/User/custom"
   backup_if_exists "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
@@ -118,6 +147,10 @@ setup_sublime () {
 setup_git () {
   if ! command -v git &> /dev/null; then
     echo "git is not installed on this system." >&2
+    return 1
+  fi
+  if [ ! -d "$DOTFILES/git" ]; then
+    echo "The \$DOTFILES/git folder does not exist."
     return 1
   fi
 

@@ -1,3 +1,4 @@
 - find a way to one click install all of these tool irrespective of the distro used.
 - setup the submodule for powerlevel10k such that it fetches the latest version of powerlevel10k every time someone git clones.
 - do something similar for zsh plugins so that they can also be maintained 
+- create destroy script to uninstall the dotfiles
