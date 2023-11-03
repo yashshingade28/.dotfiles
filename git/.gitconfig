@@ -11,12 +11,12 @@
 [alias]
     sparse-clone = "!f() { \
         set -e; \
-        repo_url=\"$1\"; \
+        repo_url="$1"; \
         shift; \
-        sparse_paths=($@); \
-        git clone --no-checkout --depth=1 --filter=blob:none \"$repo_url\"; \
-        repo_name=\"$(basename \"$repo_url\" .git)\"; \
-        cd \"$repo_name\"; \
-        git sparse-checkout set --no-cone \"${sparse_paths[@]}\"; \
+        sparse_paths="$@"; \
+        git clone --no-checkout --depth=1 --filter=blob:none "$repo_url"; \
+        repo_name="$(basename "$repo_url" .git)"; \
+        cd "$repo_name"; \
+        git sparse-checkout set --no-cone "$sparse_paths"; \
         git checkout; \
     }; f"
